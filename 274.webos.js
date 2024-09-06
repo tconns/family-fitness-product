@@ -1,0 +1,1 @@
+(()=>{let e=null;const t=(e,t)=>{self.postMessage({event:e,data:t})};self.addEventListener("message",(l=>{const{data:n}=l;if("init"===n.cmd)t(n.cmd,null),e&&(clearInterval(e),e=null),e=setInterval((()=>{t("TimeApp",Date.now())}),1e3)}))})();
